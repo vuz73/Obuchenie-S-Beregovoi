@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task2();
+            Task3();
         }
 
         /// <summary>
@@ -59,6 +59,13 @@ namespace ConsoleApp1
         public static void Task3()
         {
             int[] a = new int[] { 5, 12, 13, 2, 1, 9, 15, 19, 6 };
+            int Sum = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                Sum += a[i];
+            }
+
+            Console.WriteLine(Sum);
         }
 
         /// <summary>
