@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task1();
+            Task2();
         }
 
         /// <summary>
@@ -19,12 +19,12 @@ namespace ConsoleApp1
 
             for (int i = 1; i < a.Length; i++)
             {
-                if (min>a[i])
+                if (min > a[i])
                 {
                     min = a[i];
                 }
             }
-                Console.WriteLine(min);
+            Console.WriteLine(min);
         }
 
         /// <summary>
@@ -33,6 +33,24 @@ namespace ConsoleApp1
         public static void Task2()
         {
             int[] a = new int[] { 5, 12, 13, 2, 1, 9, 15, 19, 6 };
+            int max = a[0];
+            int max2 = a[0];
+
+            for (int i = 1; i < a.Length; i++)
+            {
+                if (max < a[i])
+                {
+                    max2 = max;
+                    max = a[i];
+                }
+
+                if (max2 < a[i] && a[i] != max)
+                {
+                    max2 = a[i];
+                }
+            }
+            Console.WriteLine(max);
+            Console.WriteLine(max2);
         }
 
         /// <summary>
