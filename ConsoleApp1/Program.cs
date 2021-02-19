@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task8();
+            Task9();
         }
 
         /// <summary>
@@ -183,6 +183,18 @@ namespace ConsoleApp1
         public static void Task9()
         {
             int[,] m = new int[,] { { 11, 22, 31 }, { 4, 53, 6 }, { 7, 81, 90 } };
+            int Sum = 0;
+            int colums = m.GetUpperBound(0)+1;
+            int rows = m.Length / colums;
+            for (int i = 0; i < colums ; i++)
+            {
+                for (int j = 0; j < rows; j++)
+                {
+                    Sum += m[i, j];
+                }
+            }
+
+            Console.WriteLine($"Сумма элементов рана: {Sum}");
         }
 
         /// <summary>
