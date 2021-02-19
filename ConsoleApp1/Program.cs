@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task10();
+            Task11();
         }
 
         /// <summary>
@@ -220,7 +220,28 @@ namespace ConsoleApp1
         /// </summary>
         public static void Task11()
         {
-            int[,] m = new int[,] { { 11, 22, 31 }, { 4, 53, 6 }, { 7, 81, 90 } };
+            int[,] m = new int[,] { { 11, 22, 31 }, { 4, 53, 6 }, { 7, 81, 90 }, { 25, 12, 34 } };
+
+            int[] od = new int[m.Length];
+            int colums = m.GetUpperBound(0) + 1;
+            int rows = m.Length / colums;
+            int k = 0;
+            for (int i = 0; i < colums; i++)
+            {
+                for (int j = 0; j < rows; j++)
+                {
+                    od[k] = m[i, j];
+                    k++;
+                    Console.Write(m[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            for (int i = 0; i < od.Length; i++)
+            {
+                Console.Write(od[i] + " ");
+            }
+            Console.WriteLine();
         }
 
 
