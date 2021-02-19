@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task4();
+            Task5();
         }
 
         /// <summary>
@@ -89,6 +89,13 @@ namespace ConsoleApp1
             //пример вызова генератора случайных чисел, он понадобится в данной задаче
             Random rnd = new Random();
             int r = rnd.Next(1, 10);//случайное число от 1 до 10
+
+            int[] mas = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                mas[i] = rnd.Next(1, 25);
+                Console.WriteLine(mas[i]);
+            }
         }
 
         /// <summary>
