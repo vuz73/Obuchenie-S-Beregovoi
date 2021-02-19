@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task6();
+            Task7();
         }
 
         /// <summary>
@@ -134,6 +134,21 @@ namespace ConsoleApp1
         public static void Task7()
         {
             int[] a = new int[] { 5, 12, 13, 2, 1, 9, 15, 19, 6 };
+            int[] b = new int[a.Length];
+            for (int i = 0; i < a.Length; i++)
+            {
+                b[i] = a[a.Length-i-1];
+            }
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.Write(a[i] +" ");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < b.Length; i++)
+            {
+                Console.Write(b[i] + " ");
+            }
         }
 
         /// <summary>
