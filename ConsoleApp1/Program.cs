@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task3();
+            Task4();
         }
 
         /// <summary>
@@ -73,7 +73,12 @@ namespace ConsoleApp1
         /// </summary>
         public static void Task4()
         {
-
+            int[] mas = new int[100];
+            for (int i = 0; i < 100; i++)
+            {
+                mas[i] = i + 1;
+                Console.WriteLine(mas[i]);
+            }
         }
 
         /// <summary>
