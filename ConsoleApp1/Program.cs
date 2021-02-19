@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task7();
+            Task8();
         }
 
         /// <summary>
@@ -157,6 +157,24 @@ namespace ConsoleApp1
         public static void Task8()
         {
             int[] a = new int[] { 5, 12, 13, 2, 1, 9, 15, 19, 6 };
+            Console.WriteLine("Начальный массив");
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.Write(a[i] + " ");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < a.Length/2; i++)
+            {
+                int t = a[i];
+                a[i] = a[a.Length - 1 - i];
+                a[a.Length - 1 - i] = t;
+            }
+            Console.WriteLine("Результирующий массив");
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.Write(a[i] + " ");
+            }
+            Console.WriteLine();
         }
 
         /// <summary>
