@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task5();
+            Task6();
         }
 
         /// <summary>
@@ -103,7 +103,29 @@ namespace ConsoleApp1
         /// </summary>
         public static void Task6()
         {
-            int[] a = new int[] { 5, 12, 13, 2, 1, 9, 15, 19, 6 };
+            int[] mas = new int[] { 5, 12, 13, 2, 1, 9, 15, 19, 6 };
+            bool result = false;
+
+            for (int i = 0; i < mas.Length / 2; i++)
+            {
+                for (int j = i + 1; j < mas.Length; j++)
+                {
+                    if (mas[i] == mas[j])
+                    {
+                        Console.WriteLine($"Да одинаковые числа есть. Это { mas[j] }");
+                        result = true;
+                        break;
+                    }
+                }
+                if (result)
+                {
+                    break;
+                }
+            }
+            if (!result)
+            {
+                Console.WriteLine("Одинаковых чисел нет.");
+            }
         }
 
         /// <summary>
