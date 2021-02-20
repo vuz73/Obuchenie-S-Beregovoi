@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Task11();
+            Task12();
         }
 
         /// <summary>
@@ -251,7 +251,26 @@ namespace ConsoleApp1
         public static void Task12()
         {
             //подсказка: для определения остатка от деления используется оператор %
-            int ostatok = 4 % 2; //будет равен нулю
+            //int ostatok = 4 % 2; //будет равен нулю
+
+            int size = 10;
+            int [,] m = new int [size, size];
+            Random rnd = new Random();
+            int count = 0;
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    Console.Write((m[i, j] = rnd.Next(1, 100)) + " ");
+                    if (m[i,j]%2 ==0)
+                    {
+                        count++;
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine($"В массиве: {count} четных чисел");
         }
     }
 }
